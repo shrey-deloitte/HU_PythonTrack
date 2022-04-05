@@ -36,7 +36,7 @@ class PairsPossible(StringClass):
         return self.li
 
 
-print(" Enter your number string")
+print(" Enter your number string: ")
 userinput = input()
 objstringclass = StringClass(userinput)
 print("Length of string is: ", objstringclass.length())
