@@ -32,7 +32,7 @@ row = int(input('Enter number of rows required: '))
 
 for i in range(row):
     for j in range(row - i):
-        print(' ', end='')  # printing space required and staying in same line
+        print(' ', end='')
 
     for j in range(2 * i + 1):
         if j == 0 or j == 2 * i or i == row - 1:
@@ -40,3 +40,15 @@ for i in range(row):
         else:
             print(' ', end='')
     print()
+
+#inverted hollow triangle
+
+n = int(input("enter the no of rows:"))
+for r in range(0, n):
+    for c in range(0, n):
+         if r == 0 or c == (n - 1) or r == c:
+             print('*', end='')
+         else:
+            print(end=' ')
+    print()
+
