@@ -1,4 +1,4 @@
-import numpy as np
+
 
 list1 = ["Hello ", "take "]
 list2 = ["Dear", "Sir"]
@@ -11,6 +11,7 @@ listA[2][1][2].extend(listToBeAdded)
 print(listA)
 
 dict1 = {"ten": 10, "Twenty": 20, "Thirty": 30}
+
 dict2 = {'Thirty': 30, 'Fourty': 40, 'Fifty': 50}
 
 dict3 = dict1.copy()
