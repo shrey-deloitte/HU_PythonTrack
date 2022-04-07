@@ -1,15 +1,6 @@
-class Movie:
-    Title = ["shrey"]
-    Genre = []
-    Length = []
-    Cast = []
-    Director = []
-    AdminRating = []
-    Timings = []
-    UserRating = []
 
 
-MovieList = []
+movieList = []
 
 movie1 = {"Title": "Lorem",
           "Genre": "Horror",
@@ -20,3 +11,4 @@ movie1 = {"Title": "Lorem",
           "Timings": "timings",
           "UserRating": "3.5"
           }
+
