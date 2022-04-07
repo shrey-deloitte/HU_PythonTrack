@@ -1,7 +1,3 @@
-a={"admin":"user"}
-
-(a['admin'])="shrey"
-
-print(list(a.keys()))
-print("")*3
-print("hi")
+a=[1,2,3,4]
+a.pop(2)
+print(a)

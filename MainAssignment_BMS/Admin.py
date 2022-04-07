@@ -22,10 +22,3 @@ class admin:
 
             else:
                 print("Wrong Credentials! ")
-
-
-
-
-
-
-

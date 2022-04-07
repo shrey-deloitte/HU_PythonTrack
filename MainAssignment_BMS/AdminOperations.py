@@ -1,4 +1,5 @@
-from MainAssignment_BMS.Movies import  movieList
+from MainAssignment_BMS.Movies import movieList
+from MainAssignment_BMS.Admin import admin
 
 
 def addMovie():
@@ -6,7 +7,7 @@ def addMovie():
     print("")
     print("adding movie")
     print("")
-    movie_dic={}
+    movie_dic = {}
     title = input("Enter the name of Movie: ")
     movie_dic['Title'] = title
 
@@ -36,18 +37,17 @@ def addMovie():
     print("new movie added", movie_dic)
     print(movieList)
 
-
     adminOperations()
 
 
 def editMovie():
     print("")
     print("")
-    print("editing movie ")
+    print("Editing movie ")
     editChoice = input("Enter which movie you want to edit: ")
     for item in movieList:
         t = item.get("Title")
-        if t!=editChoice:
+        if t != editChoice:
             print("Invalid choice! please provide correct details")
             editMovie()
         else:
@@ -60,7 +60,7 @@ def editMovie():
             print("6. AdminRating")
             print("7. Timings")
             print("8. UserRating")
-            eleChoice=int(input("which element you want to update: "))
+            eleChoice = int(input("which element you want to update: "))
             try:
                 if (eleChoice == 1):
                     newTitle = input("enter new title: ")
@@ -90,23 +90,36 @@ def editMovie():
                     print("Invalid Choice!")
             except:
                 print("Something went wrong !")
-            print("Updated! ")
             print(movieList)
-
-    adminOperations()
-
-
+            print("Updated! ")
+            return adminOperations()
 
 
 
 
 
 def deleteMovie():
-    print("deleting movie")
+    print("Delete movie")
+    delete=input("which movie you want to delete: ")
+    for item in movieList:
+        t = item.get("Title")
+        if(t!= delete):
+            print("Movie not found! ")
+            print(movieList)
+            deleteMovie()
+
+        else:
+            movieList.pop(item)
+            print(movieList)
+            print("movie deleted!")
+            return adminOperations()
+
 
 
 def logout():
-    print("logout ")
+    print("Logged Out")
+    admin1 = admin()
+    admin1.adminLogin()
 
 
 def adminOperations():

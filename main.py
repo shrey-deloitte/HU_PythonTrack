@@ -1,8 +1,10 @@
-from MainAssignment_BMS.Admin import admin
-from MainAssignment_BMS.AdminOperations import adminOperations, addMovie
+
+from MainAssignment_BMS.UserOperations import createUser
+from MainAssignment_BMS.login import login
 
 while True:
-   try:
+
+    try:
         print("****** Welcome to BookMyShow *******")
         print("1. Login")
         print("2. Register new Account")
@@ -10,26 +12,22 @@ while True:
 
         choice = int(input("Enter your choice: "))
         if choice == 1:
+            print(" ")
             print("****** Welcome to Login Page ******")
             print("1. Admin Login")
             print("2. User Login")
+            login()
 
-            loginChoice = int(input("Enter your choice: "))
-
-            if loginChoice == 1:
-                admin = admin()
-                admin.adminLogin()
-                adminOperations()
-
+        elif choice == 2:                                  # register user
+            print("")
+            print("*** Registering new User ***")
+            createUser()
 
 
+        elif choice==3:
 
-        elif choice == 2:
-            print("register user method call")
-            # register user
-
-        else:
             exit(0)
+            break
 
-   except:
-        print("Something went wrong! :( ")
+    except:
+        print("Something went wrong! :( --")
