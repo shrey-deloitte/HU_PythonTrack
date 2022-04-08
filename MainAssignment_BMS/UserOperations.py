@@ -1,4 +1,4 @@
-from MainAssignment_BMS.Movies import userList
+from MainAssignment_BMS.Movies import userList, tickets
 
 
 def createUser():
@@ -16,3 +16,21 @@ def createUser():
     if (password == Repassword):
         user["password"] = password
         userList.append(user)
+        print("User added")
+
+
+def bookTicket():
+    seatsToBeBooked = int(input("Enter the no. of seats to be booked: "))
+    if (seatsToBeBooked < tickets['total']):
+        tickets['available'] -= seatsToBeBooked
+        tickets['remaining'] += seatsToBeBooked
+        print("Seats Booked")
+    else:
+        print("Seats not available")
+
+def cancelTicket():
+    seatsToBeCanceled=int(input("enter no. of tickets to be canceled: "))
+    if(seatsToBeCanceled<tickets['available']):
+        print("cancelling")
+
+

@@ -1,3 +1,11 @@
-a=[1,2,3,4]
-a.pop(2)
+a={"name":"hi"}
+b={"name":"bye"}
+li=[]
+li.append(a)
+li.append(b)
+print(li)
+a["name"]="shrey"
+
+
+
 print(a)

@@ -1,5 +1,5 @@
 from MainAssignment_BMS.Movies import movieList
-from MainAssignment_BMS.Admin import admin
+from MainAssignment_BMS.welcomePage import welcome
 
 
 def addMovie():
@@ -101,6 +101,7 @@ def editMovie():
 def deleteMovie():
     print("Delete movie")
     delete=input("which movie you want to delete: ")
+    index=0
     for item in movieList:
         t = item.get("Title")
         if(t!= delete):
@@ -109,7 +110,8 @@ def deleteMovie():
             deleteMovie()
 
         else:
-            movieList.pop(item)
+
+            movieList.pop(index)
             print(movieList)
             print("movie deleted!")
             return adminOperations()
@@ -118,8 +120,7 @@ def deleteMovie():
 
 def logout():
     print("Logged Out")
-    admin1 = admin()
-    admin1.adminLogin()
+    return welcome()
 
 
 def adminOperations():
