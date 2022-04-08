@@ -1,4 +1,4 @@
-from MainAssignment_BMS.Movies import userList, tickets
+from BMS.Movies import userList, tickets
 
 
 def createUser():

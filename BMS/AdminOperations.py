@@ -1,6 +1,4 @@
-from MainAssignment_BMS.Movies import movieList
-from MainAssignment_BMS.welcomePage import welcome
-
+from BMS.Movies import movieList
 
 def addMovie():
     print(" ")
@@ -120,7 +118,7 @@ def deleteMovie():
 
 def logout():
     print("Logged Out")
-    return welcome()
+
 
 
 def adminOperations():

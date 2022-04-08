@@ -1,4 +1,4 @@
-from MainAssignment_BMS.Movies import userList
+from BMS.Movies import userList
 
 
 class User:
@@ -10,7 +10,7 @@ class User:
         password = input("enter Password: ")
         try:
             for user in userList:
-                if (user['username'] == username and user['password'] == password):
+                if user['username'] == username and user['password'] == password:
                     print("loggedin! :)")
                 else:
                     print("user not found")

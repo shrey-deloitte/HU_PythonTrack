@@ -1,6 +1,6 @@
-from MainAssignment_BMS.Admin import admin
-from MainAssignment_BMS.AdminOperations import adminOperations
-from MainAssignment_BMS.User import User
+from BMS.Admin import admin
+from BMS.AdminOperations import adminOperations
+from BMS.User import User
 
 
 def login():
